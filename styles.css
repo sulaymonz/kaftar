@@ -67,6 +67,9 @@ body {
 }
 
 .toggle {
+    left: 50%;
+    max-width: none;
+    margin-left: -3em;
     margin-top: 24px;
     box-sizing: border-box;
     outline: 0;
@@ -127,4 +130,16 @@ body {
 }
 .toggle:active:after {
     width: 65% !important;
+}
+.break-word {
+    word-wrap: break-word;
+}
+.left-align {
+    text-align: left;
+}
+.right-align {
+    text-align: right;
+}
+.control-label {
+    font-weight: normal !important;
 }
