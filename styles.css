@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Moodyrock';
+    src: url('fonts/Moodyrock.eot');
+    src: local('?'),
+    url('fonts/Moodyrock.woff') format('woff'),
+    url('fonts/Moodyrock.ttf') format('truetype'),
+    url('fonts/Moodyrock.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,.0975) !important;
+    height: 77px !important;
+}
+.navbar-brand {
+    height: 77px !important;
+    line-height: 77px !important;
+    color: #000 !important;
+    padding: 0 !important;
+    padding-left: 49px !important;
+    background: url("images/logo.png") 0 22px no-repeat;
+    background-size: 31%;
+    font-family: 'Moodyrock', sans-serif;
+    font-size: 24px !important;
+}
+#main-toggle {
+    display: none !important;
+}
+.toggle,
+.toggle:after,
+.toggle:before,
+.toggle *,
+.toggle *:after,
+.toggle *:before,
+.toggle + .tgl-btn {
+    box-sizing: border-box !important;
+}
+.toggle::selection {
+     background: none !important;
+}
+
+.toggle {
+    left: 50%;
+    margin-left: -3em;
+    margin-top: 23px;
+    box-sizing: border-box;
+    outline: 0;
+    display: block;
+    width: 6em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    background: #fbfbfb;
+    border-radius: 2em;
+    padding: 2px;
+    transition: all .4s ease;
+    border: 1px solid #e8eae9;
+}
+.toggle:after,
+.toggle:before {
+    position: relative !important;
+    display: block !important;
+    content: "" !important;
+    width: 50% !important;
+    height: 100% !important;
+}
+.toggle:after {
+    left: 0;
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition:
+            left .3s cubic-bezier(
+                    0.175, 0.885, 0.320, 1.275
+            ),
+            width .3s,
+            padding .3s ease, margin .3s ease;
+    box-shadow:
+            0 0 0 1px rgba(0,0,0,.1),
+            0 4px 0 rgba(0,0,0,.08);
+}
+.toggle:hover:after {
+    will-change: padding !important;
+}
+.toggle:before {
+    display: none !important;
+}
+.tgl:checked + .toggle {
+    /*background: #f8e0b3 !important;*/
+}
+.tgl:checked + .toggle:after {
+    left: 50%;
+}
+.toggle:active {
+    background: #e8eae9 !important;
+}
+.tgl:checked + .toggle:active {
+    box-shadow: none !important;
+}
+.tgl:checked + .toggle:active:after {
+    margin-left: -.8em;
+}
+.toggle:active:after {
+    width: 65% !important;
+}
