@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
+
+<div class="gradient"></div>
 
 <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
@@ -24,12 +28,12 @@
 
                 <form class="form-inline">
                     <ul class="nav navbar-nav">
-                        <li class="tgl-label">Отправители</li>
+                        <li class="tgl-label tgl-label-left active">Отправители</li>
                         <li>
                             <input class="tgl" type="checkbox" id="main-toggle">
                             <label class="toggle" for="main-toggle"></label>
                         </li>
-                        <li class="tgl-label">Доставщики</li>
+                        <li class="tgl-label tgl-label-right">Доставщики</li>
                     </ul>
                     <label class="sr-only" for="otkuda">Name</label>
                     <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="otkuda" placeholder="Откуда">
@@ -39,12 +43,69 @@
                     <label class="sr-only" for="kuda">Name</label>
                     <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="kuda" placeholder="Куда">
 
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control dateinput" />
+                            <span class="input-group-addon date-addon">
+                        <i class="ionicons ion-ios-calendar"></i>
+                    </span>
+                        </div>
+                    </div>
+                    <!--<script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker1').datetimepicker();
+                        });
+                    </script>-->
+
                     <button class="btn btn-default search"><i class="ionicons ion-ios-search-strong"></i></button>
                 </form>
             </div>
         </div>
     </div>
 </nav>
+
+<div class="main">
+    <div class="row">
+        <div class="col-sm-1 col-md-3"></div>
+        <div class="col-sm-10 col-md-6 feed">
+            <div class="add-card">
+                <div class="add-top">
+                    <div class="add-icon">
+                        <svg height="54" width="54" stroke="#fff">
+                            <circle cx="27" cy="27" r="20" stroke-width="1" fill="transparent" />
+                            <line x1="15" y1="27" x2="39" y2="27" stroke-width="1" />
+                            <line x1="27" y1="15" x2="27" y2="39" stroke-width="1" />
+                            <!--Sorry, your browser does not support inline SVG.-->
+                        </svg>
+                    </div>
+                </div>
+                <div class="add-copy">Добавить объявление</div>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
