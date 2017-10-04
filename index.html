@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -13,21 +14,33 @@
 <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-2">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"><span>kaftar</span></a>
                 </div>
             </div>
-            <div class="col-sm-8">
-                <ul class="nav navbar-nav">
-                    <li>Отправители</li>
-                    <li>
-                        <input class="tgl" type="checkbox" id="main-toggle">
-                        <label class="toggle" for="main-toggle"></label>
-                    </li>
-                    <li>Доставщики</li>
-                </ul>
+            <div class="col-sm-9">
+
+                <form class="form-inline">
+                    <ul class="nav navbar-nav">
+                        <li class="tgl-label">Отправители</li>
+                        <li>
+                            <input class="tgl" type="checkbox" id="main-toggle">
+                            <label class="toggle" for="main-toggle"></label>
+                        </li>
+                        <li class="tgl-label">Доставщики</li>
+                    </ul>
+                    <label class="sr-only" for="otkuda">Name</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="otkuda" placeholder="Откуда">
+
+                    <label><i class="ionicons ion-plane plane"></i></label>
+
+                    <label class="sr-only" for="kuda">Name</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="kuda" placeholder="Куда">
+
+                    <button class="btn btn-default search"><i class="ionicons ion-ios-search-strong"></i></button>
+                </form>
             </div>
         </div>
     </div>

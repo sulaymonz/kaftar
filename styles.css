@@ -74,8 +74,8 @@ body {
     margin-top: -3px;
     outline: 0;
     display: block;
-    width: 6em;
-    height: 2em;
+    width: 5em;
+    height: 30px;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -83,7 +83,7 @@ body {
     border-radius: 2em;
     padding: 2px;
     transition: all .4s ease;
-    border: 1px solid #e8eae9;
+    border: 1px solid rgba(98,96,81,.2);
 }
 .toggle:after,
 .toggle:before {
@@ -96,7 +96,7 @@ body {
 .toggle:after {
     left: 0;
     border-radius: 2em;
-    background: #fbfbfb;
+    background: #fdfdfd;
     transition:
             left .3s cubic-bezier(
                     0.175, 0.885, 0.320, 1.275
@@ -104,8 +104,8 @@ body {
             width .3s,
             padding .3s ease, margin .3s ease;
     box-shadow:
-            0 0 0 1px rgba(0,0,0,.1),
-            0 4px 0 rgba(0,0,0,.08);
+            0 0 0 1px rgba(98,96,81,.1),
+            0 4px 0 rgba(98,96,81,.08);
 }
 .toggle:hover:after {
     will-change: padding !important;
@@ -120,7 +120,7 @@ body {
     left: 50%;
 }
 .toggle:active {
-    background: #e8eae9 !important;
+    background: rgba(98,96,81,.1) !important;
 }
 .tgl:checked + .toggle:active {
     box-shadow: none !important;
@@ -132,10 +132,58 @@ body {
     width: 65% !important;
 }
 
-
 .control-label {
     font-weight: normal !important;
 }
 .navbar li {
-    margin: 29px 4px 0 4px;
+    margin: 0 4px 0 4px;
 }
+
+.navbar .form-inline {
+    padding-top: 20px !important;
+}
+.nav {
+    margin: 5px 20px 0 0 !important;
+}
+.tgl-label {
+    margin-top: 2px !important;
+}
+#otkuda,
+#kuda {
+    width: 130px;
+    border-color: rgba(98,96,81,.5);
+}
+.form-control {
+    margin: 0 4px 0 4px !important;
+}
+.form-control:focus {
+    border-color: rgba(216,82,58,.7) !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.055), 0 0 8px rgba(216,82,58,.4) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.055), 0 0 8px rgba(216,82,58,.4) !important;
+}
+.btn-default.search {
+    border-color: rgba(216,82,58,.7);
+    color: #d8523a;
+    transition: all .1s !important;
+    margin-left: 4px;
+}
+.btn-default.search:hover,
+.btn-default.search:active {
+    border-color: rgba(216,82,58,.7) !important;
+    outline: none !important;
+    color: #fff !important;
+    background-color: #d8523a !important;
+}
+.btn-default:focus {
+    background-color: transparent !important;
+    color: #d8523a !important;
+}
+.btn-default.search:focus {
+    border-color: rgba(216,82,58,.7) !important;
+    outline: none !important;
+}
+.plane {
+    color: #d8523a;
+    transform: rotate(90deg);
+}
+
