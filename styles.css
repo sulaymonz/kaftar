@@ -216,8 +216,8 @@ body {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: #fe5f55;
-    /*background: linear-gradient(-45deg, #f0b67f, #fe5f55);*/
+    /*background-color: #fe5f55;*/
+    background: linear-gradient(-10deg, #f0b67f, #fe5f55);
     /*background-size: 170% 170%;*/
     /*animation: Gradient 15s ease infinite;*/
 }
@@ -242,7 +242,7 @@ body {
     background-color: #fff;
     border-radius: 4px;
     margin: 20px 0 20px 0;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .add-card {
     width: 100%;
@@ -254,7 +254,7 @@ body {
     transition: all .1s;
 }
 .add-card:hover {
-    background: rgba(255,255,255,.1);
+    /*background: rgba(255,255,255,.1);*/
 }
 .add-top {
     float: left;
@@ -276,12 +276,13 @@ body {
 }
 .add-card:hover svg {
     /*stroke: #d8523a;*/
+    transform: scale(1.08);
 }
 .add-copy {
     float: left;
-    width: 110%;
+    width: 100%;
     height: 26px;
-    margin-left: -5%;
+    margin-left: 0;
     margin-top: -1px;
     text-align: center;
     color: #fff;
@@ -290,4 +291,6 @@ body {
 }
 .add-card:hover .add-copy {
     /*color: #d8523a;*/
+    width: 110%;
+    margin-left: -5%;
 }
