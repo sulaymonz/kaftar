@@ -32,6 +32,8 @@
 body {
     font-family: 'BloggerSans-Light', sans-serif !important;
     font-size: 14px;
+    /*text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;*/
 }
 
 /*Navigation Bar*/
@@ -158,11 +160,11 @@ body {
 }
 /*#otkuda,
 #kuda {
-    width: 130px;
+    width: 100px;
     border-color: rgba(98,96,81,.5);
 }*/
 .form-control {
-    width: 130px !important;
+    width: 100px !important;
     border-color: rgba(98,96,81,.5) !important;
     margin: 0 4px 0 4px !important;
 }
@@ -176,6 +178,7 @@ body {
     color: #d8523a;
     transition: all .1s !important;
     margin-left: 4px;
+    width: 100px;
 }
 .btn-default.search:hover,
 .btn-default.search:active {
@@ -198,14 +201,23 @@ body {
 }
 
 .dateinput {
-    margin-right: 0 !important;
-    border-right: none !important;
+    /*margin-right: 0 !important;
+    border-right: none !important;*/
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 2px !important;
+    border: none !important;
+    visibility: hidden !important;
 }
 .date-addon {
     border-color: rgba(216,82,58,.7) !important;
     border-left: 1px solid rgba(216,82,58,.7) !important;
     background-color: transparent !important;
     color: #d8523a !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
 }
 
 /*Conntents in Middle*/
@@ -272,11 +284,12 @@ body {
     border-radius: 27px;
 }
 .add-icon svg {
-    transition: all .1s;
+    transition: all .3s;
 }
 .add-card:hover svg {
     /*stroke: #d8523a;*/
-    transform: scale(1.08);
+    /*transform: scale(1.05);*/
+    transform: rotate(90deg);
 }
 .add-copy {
     float: left;
@@ -291,6 +304,6 @@ body {
 }
 .add-card:hover .add-copy {
     /*color: #d8523a;*/
-    width: 110%;
-    margin-left: -5%;
+    /*width: 104%;
+    margin-left: -2%;*/
 }
