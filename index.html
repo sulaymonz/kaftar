@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>-->
     <script src="script.js"></script>
 </head>
 <body>
@@ -28,8 +29,8 @@
             <div class="col-sm-9">
 
                 <form class="form-inline">
-                    <ul class="nav navbar-nav">
-                        <li class="tgl-label tgl-label-left active">Отправители</li>
+                    <ul class="nav navbar-nav toggle-wrapper toggledLeft">
+                        <li class="tgl-label tgl-label-left">Отправители</li>
                         <li>
                             <input class="tgl" type="checkbox" id="main-toggle">
                             <label class="toggle" for="main-toggle"></label>
@@ -46,7 +47,7 @@
 
                     <div class="form-group">
                         <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control dateinput" />
+                            <input type='text' class="form-control dateinput" id="dateinput" />
                             <span class="input-group-addon date-addon">
                         <i class="ionicons ion-ios-calendar"></i>
                     </span>
@@ -58,25 +59,25 @@
                         });
                     </script>-->
 
-                    <button class="btn btn-default search"><i class="ionicons ion-ios-search-strong"></i></button>
+                    <button class="btn btn-default search-btn white-orange"><i class="ionicons ion-ios-search-strong"></i></button>
                 </form>
             </div>
         </div>
     </div>
 </nav>
 
-<div class="main">
+<div class="container">
     <div class="row">
         <div class="col-sm-1 col-md-3"></div>
         <div class="col-sm-10 col-md-6 feed">
-            <div class="add-card">
+            <div class="add-card" data-toggle="modal" data-target="#myModal" id="add-card">
                 <div class="add-top">
                     <div class="add-icon">
                         <svg height="54" width="54" stroke="#fff">
                             <circle cx="27" cy="27" r="20" stroke-width="1" fill="transparent" />
                             <line x1="15" y1="27" x2="39" y2="27" stroke-width="1" />
                             <line x1="27" y1="15" x2="27" y2="39" stroke-width="1" />
-                            <!--Sorry, your browser does not support inline SVG.-->
+                            +
                         </svg>
                     </div>
                 </div>
@@ -103,8 +104,105 @@
             <div class="card"></div>
             <div class="card"></div>
             <div class="card"></div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-heading text-center">
+                                <div class="title">Добавить Объявление</div>
+                                <p class="title-description">
+                                    Заполните данные о вашем объявлении<!--. Объязательные поля отмечены (*).-->
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center" id="iwant">Я хочу</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="add-toggle-list toggle-wrapper toggledLeft inline-flex">
+                                        <li class="tgl-label tgl-label-left active">Отправить</li>
+                                        <li>
+                                            <input class="tgl" type="checkbox" id="add-toggle">
+                                            <label class="toggle" for="add-toggle"></label>
+                                        </li>
+                                        <li class="tgl-label tgl-label-right">Доставить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Откуда" id="from-where" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Куда" id="to-where" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control" id="date" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="E-mail" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Имя" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Телефон" id="phone" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" placeholder="Viber, Skype, WhatsAp или др." id="messenger" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="document">Документы</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 weight-wrapper inline-flex">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="" id="parcel">Посылку <span class="kg-prefix">до</span></label>
+                                        </div>
+                                        <input type="number" class="form-control" value="" id="weight" min="1" max="100" required>
+                                        <span class="kg">кг</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button class="btn btn-default white-orange add-submit" id="add-submit">Добавить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="add-button add-hide" id="add-button" data-toggle="modal" data-target="#myModal">
+        <svg height="54" width="54" stroke="#fff" fill="#fe5f55">
+            <circle cx="27" cy="27" r="27" stroke-width="0" />
+            <line x1="15" y1="27" x2="39" y2="27" stroke-width="1" />
+            <line x1="27" y1="15" x2="27" y2="39" stroke-width="1" />
+            +
+        </svg>
+    </div>
+
 </div>
 
 
