@@ -9,11 +9,14 @@ window.onload = function(){
     var addCard       = document.querySelector('#add-card');
     var addButton     = document.querySelector('#add-button');
     var weightWrapper = document.querySelector('.weight-wrapper');
+    var hamburger     = document.querySelector('.navbar-toggle');
 
     var toggle          = getAll('.tgl', document);
     var toggleLeft      = getAll('.tgl-label-left', document);
     var toggleRight     = getAll('.tgl-label-right', document);
     var togglewrapper   = getAll('.toggle-wrapper', document);
+
+    var navExpanded = false;
 
     // show weight on parcel check
     parcel.addEventListener('click', toggleWeight);
@@ -47,6 +50,8 @@ window.onload = function(){
         });
     });
 
+    // show dark overlay on navbar expand
+    hamburger.addEventListener('click', toggleNav);
 
 
     function toggleWeight(){
@@ -72,6 +77,17 @@ window.onload = function(){
             parent.className = parent.className.replace(/\btoggledLeft\b/,'toggledRight');
         else
             parent.className = parent.className.replace(/\btoggledRight\b/,'toggledLeft');
+    }
+
+    function toggleNav(){
+        if(!navExpanded) {
+            document.body.className = document.body.className + ' nav-expanded';
+            navExpanded = true;
+        }
+        else {
+            document.body.className = document.body.className.replace(/\bnav-expanded\b/,'');
+            navExpanded = false;
+        }
     }
 
     function getAll(selector, context){

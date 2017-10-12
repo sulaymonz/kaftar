@@ -4,14 +4,16 @@
     <title>Kaftar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>-->
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment/locale/ru.js"></script>
+    <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 </head>
 <body>
 
@@ -23,48 +25,53 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-2">
                 <div class="navbar-header">
+                    <div type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kaftarNav">
+                        <i class="ionicons ion-ios-search-strong"></i>
+                    </div>
                     <a class="navbar-brand" href="#"><span>kaftar</span></a>
                 </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-xs-10 collapse navbar-collapse" id="kaftarNav">
 
-                <form class="form-inline">
-                    <ul class="nav navbar-nav toggle-wrapper toggledLeft">
-                        <li class="tgl-label tgl-label-left">Отправители</li>
-                        <li>
-                            <input class="tgl" type="checkbox" id="main-toggle">
-                            <label class="toggle" for="main-toggle"></label>
-                        </li>
-                        <li class="tgl-label tgl-label-right">Доставщики</li>
-                    </ul>
-                    <label class="sr-only" for="otkuda">Name</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="otkuda" placeholder="Откуда">
+                <ul class="nav navbar-nav toggle-wrapper toggledLeft">
+                    <li class="tgl-label tgl-label-left">Отправители</li>
+                    <li>
+                        <input class="tgl" type="checkbox" id="main-toggle">
+                        <label class="toggle" for="main-toggle"></label>
+                    </li>
+                    <li class="tgl-label tgl-label-right">Доставщики</li>
+                </ul>
 
-                    <label><i class="ionicons ion-plane plane"></i></label>
+                <label class="sr-only" for="otkuda">Name</label>
+                <input type="text" class="form-control" id="otkuda" placeholder="Откуда">
 
-                    <label class="sr-only" for="kuda">Name</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="kuda" placeholder="Куда">
+                <label class="lb-plane"><i class="ionicons ion-plane plane"></i></label>
 
-                    <div class="form-group">
-                        <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control dateinput" id="dateinput" />
-                            <span class="input-group-addon date-addon">
-                        <i class="ionicons ion-ios-calendar"></i>
-                    </span>
-                        </div>
-                    </div>
-                    <!--<script type="text/javascript">
-                        $(function () {
-                            $('#datetimepicker1').datetimepicker();
+                <label class="sr-only" for="kuda">Name</label>
+                <input type="text" class="form-control" id="kuda" placeholder="Куда">
+
+                <div class='input-group date' id='datetimepicker'>
+                    <input type='text' class="form-control dateinput" id="dateinput" placeholder="Когда" />
+                    <span class="input-group-addon date-addon"><i class="ionicons ion-ios-calendar"></i></span>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker').datetimepicker({
+                            locale: 'ru',
+                            format: 'Do MMMM, YYYY'
                         });
-                    </script>-->
+                    });
+                </script>
 
-                    <button class="btn btn-default search-btn white-orange"><i class="ionicons ion-ios-search-strong"></i></button>
-                </form>
+                <button class="btn btn-default search-btn white-orange"><i class="ionicons ion-ios-search-strong"></i></button>
+
             </div>
         </div>
     </div>
 </nav>
+
+<div class="expand-overlay"></div>
 
 <div class="container">
     <div class="row">
