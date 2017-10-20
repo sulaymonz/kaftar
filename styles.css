@@ -64,6 +64,7 @@ body {
     color: #d8523a !important;
     padding: 0 !important;
     padding-left: 55px !important;
+    margin-left: 0 !important;
     background: url("images/logo4.png") 0 18px no-repeat;
     background-size: 37%;
     font-family: 'Moodyrock', sans-serif;
@@ -390,7 +391,7 @@ body.nav-expanded {
     transition: all .1s;
 }
 .add-card:hover {
-    /*background: rgba(255,255,255,.1);*/
+    background: rgba(255,255,255,.1);
 }
 .add-top {
     float: left;
@@ -523,8 +524,8 @@ body.nav-expanded {
 .add-submit:hover {
     background-color: #fe5f55 !important;
 }
-.modal.in .modal-dialog {
-    animation: fadeIn .5s !important;
+/*.modal.in .modal-dialog {
+    animation: fadeIn .5s forwards !important;
 }
 @keyframes fadeIn {
     0% {
@@ -535,7 +536,7 @@ body.nav-expanded {
         opacity: 1;
         transform: translateY(0px);
     }
-}
+}*/
 #weight {
     width: 0 !important;
 }
