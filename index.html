@@ -4,11 +4,13 @@
     <title>Kaftar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="bower_components/moment/locale/ru.js"></script>
     <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="bower_components/blueimp-md5/js/md5.min.js"></script>
+    <script type="text/javascript" src="node_modules/identicon.js/identicon.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -95,14 +97,14 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Могу доставить документы и/или посылку до 12кг из <span class="important">г. Душанбе,
-                        Таджикистан</span> в <span class="important">г. Москва, Россия</span>
+                        Могу доставить документы и/или посылку до 12кг из <span class="important c-from">г. Душанбе,
+                        Таджикистан</span> в <span class="important c-to">г. Москва, Россия</span>
                         12 октября 2017. Кому интересно обращайтесь.
                     </div>
                     <div class="avatar"></div>
                 </div>
                 <div class="card-footer">
-                    <div class="c-name">Саймухтор</div>
+                    <div class="c-name">Мурод</div>
                     <div class="c-phone">935-35-35-42</div>
                     <div class="c-messenger">988-88-88-42 (Viber)</div>
                 </div>
@@ -112,8 +114,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Хочу отправить документы и/или посылку до 12кг из <span class="important">г. Франкфурт,
-                        Германия</span> в <span class="important">г. Душанбе, Таджикистан</span>
+                        Хочу отправить документы и/или посылку до 12кг из <span class="important c-from">г. Франкфурт,
+                        Германия</span> в <span class="important c-to">г. Душанбе, Таджикистан</span>
                         12 октября 2017. Звоните договоримся.
                     </div>
                     <div class="avatar"></div>
@@ -129,8 +131,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Без проблем могу доставить документы и/или посылку до 12кг из <span class="important">
-                        г. Душанбе, Таджикистан</span> в <span class="important">г. Иркутск, Россия</span>
+                        Без проблем могу доставить документы и/или посылку до 12кг из <span class="important c-from">
+                        г. Душанбе, Таджикистан</span> в <span class="important c-to">г. Иркутск, Россия</span>
                         12 октября 2017. Если интересно, звоните.
                     </div>
                     <div class="avatar"></div>
@@ -147,8 +149,8 @@
                 <div class="card-body">
                     <div class="card-text">
                         Выручайте пожалуйста, мне нужно отправить документы и/или посылку до 12кг из
-                        <span class="important">г. Екатеринбург, Россия</span> в
-                        <span class="important">г. Душанбе,Таджикистан</span>
+                        <span class="important c-from">г. Екатеринбург, Россия</span> в
+                        <span class="important c-to">г. Душанбе,Таджикистан</span>
                         12 октября 2017. Жду звонков.
                     </div>
                     <div class="avatar"></div>
@@ -164,8 +166,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Могу доставить документы и/или посылку до 12кг из <span class="important">г. Душанбе,
-                        Таджикистан</span> в <span class="important">г. Дубай, ОАЭ</span>
+                        Могу доставить документы и/или посылку до 12кг из <span class="important c-from">г. Душанбе,
+                        Таджикистан</span> в <span class="important c-to">г. Дубай, ОАЭ</span>
                         12 октября 2017. Кому надо звоните, пишите.
                     </div>
                     <div class="avatar"></div>
@@ -181,8 +183,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Нужно отправить документы и/или посылку до 12кг из <span class="important">г. Истанбул,
-                        Турция</span> в <span class="important">г. Душанбе, Таджикистан</span>
+                        Нужно отправить документы и/или посылку до 12кг из <span class="important c-from">г. Истанбул,
+                        Турция</span> в <span class="important c-to">г. Душанбе, Таджикистан</span>
                         12 октября 2017. Выручайте добрые люди =)
                     </div>
                     <div class="avatar"></div>
@@ -198,8 +200,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Могу доставить документы и/или посылку до 12кг из <span class="important">г. Душанбе,
-                        Таджикистан</span> в <span class="important">г. Москва, Россия</span>
+                        Могу доставить документы и/или посылку до 12кг из <span class="important c-from">г. Душанбе,
+                        Таджикистан</span> в <span class="important c-to">г. Москва, Россия</span>
                         12 октября 2017. Кому интересно обращайтесь.
                     </div>
                     <div class="avatar"></div>
@@ -215,8 +217,8 @@
                 <div class="c-line"></div>
                 <div class="card-body">
                     <div class="card-text">
-                        Хочу отправить документы и/или посылку до 12кг из <span class="important">г. Душанбе,
-                        Таджикистан</span> в <span class="important">г. Москва, Россия</span>
+                        Хочу отправить документы и/или посылку до 12кг из <span class="important c-from">г. Душанбе,
+                        Таджикистан</span> в <span class="important c-to">г. Москва, Россия</span>
                         12 октября 2017. Звоните договоримся.
                     </div>
                     <div class="avatar"></div>

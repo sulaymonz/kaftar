@@ -682,33 +682,15 @@ input[type=checkbox]:checked:after {
     width: 23%;
     height: 80px;
     background-size: contain !important;
-    background-color: rgba(216,82,58,.2) !important;
+    /*background-color: rgba(216,82,58,.2) !important;*/
     /*border: 1px solid rgba(216,82,58,.7);*/
     border-radius: 80px;
+    text-align: center;
 }
-.card-1 .avatar {
-    background: url("images/4.png") 50% 0 no-repeat;
-}
-.card-2 .avatar {
-    background: url("images/3.png") 50% 0 no-repeat;
-}
-.card-3 .avatar {
-    background: url("images/2.png") 50% 0 no-repeat;
-}
-.card-4 .avatar {
-    background: url("images/1.png") 50% 0 no-repeat;
-}
-.card-5 .avatar {
-    background: url("images/5.png") 50% 0 no-repeat;
-}
-.card-6 .avatar {
-    background: url("images/6.png") 50% 0 no-repeat;
-}
-.card-7 .avatar {
-    background: url("images/7.png") 50% 0 no-repeat;
-}
-.card-8 .avatar {
-    background: url("images/8.png") 50% 0 no-repeat;
+
+.avatar img {
+    height: 100%;
+    width: auto;
 }
 
 .card-footer {

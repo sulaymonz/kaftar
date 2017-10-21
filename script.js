@@ -15,13 +15,17 @@ window.onload = function(){
     var toggleLeft      = getAll('.tgl-label-left', document);
     var toggleRight     = getAll('.tgl-label-right', document);
     var togglewrapper   = getAll('.toggle-wrapper', document);
+    var avatarHolder    = getAll('.avatar', document);
+    var name            = getAll('.c-name', document);
+    var from            = getAll('.c-from', document);
+    var to              = getAll('.c-to', document);
 
     var navExpanded = false;
 
-    // show weight on parcel check
+    // Show weight on parcel check
     parcel.addEventListener('click', toggleWeight);
 
-    // show float button on scroll
+    // Show float button on scroll
     window.addEventListener('scroll', function(){
         if(isScrolledIntoView(addCard))
             addButton.className = 'add-button add-hide';
@@ -29,7 +33,7 @@ window.onload = function(){
         else addButton.className = 'add-button';
     });
 
-    // changing toggle class on state change
+    // Changing toggle class on state change
     toggle.forEach(function(tgl, i){
         tgl.addEventListener('click', function(){
             handleToggle(tgl, togglewrapper[i]);
@@ -50,9 +54,15 @@ window.onload = function(){
         });
     });
 
-    // show dark overlay on navbar expand
+    // Show dark overlay on navbar expand
     hamburger.addEventListener('click', toggleNav);
 
+    // Generating avatar for each card
+    avatarHolder.forEach(function(avatar, i){
+        generateAvatar(avatar, i);
+    });
+
+    /*-------------------------------FUNCTIONS--------------------------------*/
 
     function toggleWeight(){
         if(parcel.checked){
@@ -88,6 +98,23 @@ window.onload = function(){
             document.body.className = document.body.className.replace(/\bnav-expanded\b/,'');
             navExpanded = false;
         }
+    }
+
+    function generateAvatar(cont, i){
+        var hash = md5(name[i].innerHTML);
+        var options = {
+            // foreground: [0, 0, 0, 255],
+            background: [255, 255, 255, 255],
+            // margin: 0,
+            // size: 128, // that's in pixels (64 by default)
+            format: 'svg',
+            saturation: 0.6,
+            brightness: 0.7
+        };
+        var data = new Identicon(hash, options).toString();
+        var img  = new Image();
+        img.src = 'data:image/svg+xml;base64,' + data;
+        cont.appendChild(img);
     }
 
     function getAll(selector, context){
